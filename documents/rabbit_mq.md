@@ -1,6 +1,7 @@
 # Mục lục
 
 1. [Giới thiệu](#giới-thiệu)
+    - [Cách hoạt động](#hoạt-động)
 2. [Cài đặt](#cài-đặt)
 3. [Sử dụng](#sử-dụng)
     - [Chạy chương trình](#chạy-chương-trình)
@@ -16,11 +17,13 @@
 
 ## Giới thiệu
 
-Đoạn giới thiệu về dự án.
+RabbitMQ là phần mềm trung gian giúp hệ thống trao đổi dữ liệu với nhau
+
+### Hoạt động
 
 ## Cài đặt
 
-Hướng dẫn cài đặt dự án.
+Chạy câu lệnh ở cmd để tải về docker: docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.13-management
 
 ## Sử dụng
 
@@ -59,3 +62,6 @@ Thông tin về cách góp ý và đóng góp cho dự án.
 ## License
 
 Thông tin về license của dự án.
+```
+print("Hello, world!")
+```
