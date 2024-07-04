@@ -6,62 +6,72 @@
 3. [Sử dụng](#sử-dụng)
     - [Chạy chương trình](#chạy-chương-trình)
     - [Cấu hình](#cấu-hình)
-4. [Các tính năng](#các-tính-năng)
-    - [Tính năng 1](#tính-năng-1)
-    - [Tính năng 2](#tính-năng-2)
-5. [API](#api)
-    - [Endpoint 1](#endpoint-1)
-    - [Endpoint 2](#endpoint-2)
-6. [Góp ý & Đóng góp](#góp-ý-đóng-góp)
-7. [License](#license)
+
 
 ## Giới thiệu
 
-RabbitMQ là phần mềm trung gian giúp hệ thống trao đổi dữ liệu với nhau
+RabbitMQ là một message broker (trung gian tin nhắn)  giúp hệ thống trao đổi dữ liệu với nhau
 
 ### Hoạt động
 
+Producer: Chịu trách nhiệm sản xuất và gửi các tin nhắn tới RabbitMQ
+
+Message Queue: Là nơi các tin nhắn được lưu trữ tạm thời trước khi được xử lý bởi các consumer
+
+Exchange: Nhận tin nhắn từ producer định tuyến đến queues phù hợp
+
+Binding: Liên kết giữa exchange và queues
+
+### Các loại exchange
+
+Direct Exchange: Định tuyến tin nhắn từ exchange tới hàng đợi dựa trên routing key của tin nhắn( routing key của message khớp với routing key của queue)
+
+Default exchange: Là một direct exchange mặc định, cho phép định tuyến message trực tiếp tới queue với tên là routing key của message
+
+Fanout Exchange: Message được định tuyến đến tất cả các queue được liên kết với nó, bất kể chúng có routing key như nào
+
+Topic Exchange: Định tuyến dựa trên topic
+
+Header exchange: Định tuyến dựa trên header thay vì routing key
+
+Consumer: Nhận và xử lý các tin nhắn từ RabbitMQ
 ## Cài đặt
 
 Chạy câu lệnh ở cmd để tải về docker: docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.13-management
 
 ## Sử dụng
 
-### Chạy chương trình
+### Chạy chương trình trên RabbitMQ Management
 
-Hướng dẫn cách chạy chương trình.
+Direct exchange:
 
-### Cấu hình
+![Direct ](image/direct.png)
 
-Hướng dẫn cấu hình chương trình.
+![Direct1 ](image/direct1.png)
 
-## Các tính năng
+Fanout exchange:
 
-### Tính năng 1
+![Fanout ](image/fanout.png)
 
-Chi tiết về tính năng 1.
+![Fanout1 ](image/fanout1.png)
 
-### Tính năng 2
+Topic exchange:
 
-Chi tiết về tính năng 2.
+![Topic ](image/topic.png)
 
-## API
+![Topic1 ](image/topic1.png)
 
-### Endpoint 1
+Header exchange:
 
-Chi tiết về Endpoint 1.
+![Header ](image/header.png)
 
-### Endpoint 2
+![Header1 ](image/header1.png)
 
-Chi tiết về Endpoint 2.
+### Chạy SpringBoot
 
-## Góp ý & Đóng góp
+![Springboot ](image/springboot.png)
 
-Thông tin về cách góp ý và đóng góp cho dự án.
+![Springboot1 ](image/springboot1.png)
 
-## License
+![Springboot2 ](image/springboot2.png)
 
-Thông tin về license của dự án.
-```
-print("Hello, world!")
-```
