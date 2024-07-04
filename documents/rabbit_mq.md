@@ -4,8 +4,8 @@
     - [Cách hoạt động](#hoạt-động)
 2. [Cài đặt](#cài-đặt)
 3. [Sử dụng](#sử-dụng)
-    - [Chạy chương trình](#chạy-chương-trình)
-    - [Cấu hình](#cấu-hình)
+    - [Chạy chương trình RabbitMQ Management](#chạy-chương-trình-trên-rabbitmq-management)
+    - [Chạy SpringBoot](#chạy-springboot)
 
 
 ## Giới thiệu
