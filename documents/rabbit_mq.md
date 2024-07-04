@@ -2,6 +2,7 @@
 
 1. [Giới thiệu](#giới-thiệu)
     - [Cách hoạt động](#hoạt-động)
+    - [Các loại exchange](#các-loại-exchange)
 2. [Cài đặt](#cài-đặt)
 3. [Sử dụng](#sử-dụng)
     - [Chạy chương trình RabbitMQ Management](#chạy-chương-trình-trên-rabbitmq-management)
