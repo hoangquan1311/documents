@@ -7,6 +7,7 @@
 3. [Sử dụng](#sử-dụng)
     - [Chạy chương trình RabbitMQ Management](#chạy-chương-trình-trên-rabbitmq-management)
     - [Chạy SpringBoot](#chạy-springboot)
+    - [Chạy JavaCore](#chạy-javacore)
 
 
 ## Giới thiệu
@@ -78,3 +79,11 @@ Header exchange:
 
 ![Springboot2 ](image/springboot2.png)
 
+![Springboot3 ](image/springboot3.png)
+
+### Chạy JavaCore
+![JavaCore1 ](image/javacore1.png)
+
+![JavaCore2 ](image/javacore2.png)
+
+![JavaCore3 ](image/javacore3.png)
