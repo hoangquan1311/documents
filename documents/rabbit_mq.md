@@ -38,6 +38,7 @@ Header exchange: Định tuyến dựa trên header thay vì routing key
 Consumer: Nhận và xử lý các tin nhắn từ RabbitMQ
 ## Cài đặt
 Chạy câu lệnh ở cmd để tải về docker:
+
 ```
 docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.13-management
 ```
