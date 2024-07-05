@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/demo/pom.xml" />
+        <option value="$PROJECT_DIR$/demo1/springboot-rabbitmq/pom.xml" />
+        <option value="$PROJECT_DIR$/javacore-rabbitmq/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled/pom.xml" />
+        <option value="$PROJECT_DIR$/javacore/pom.xml" />
+        <option value="$PROJECT_DIR$/demo1/spring-data-redis-main/pom.xml" />
+        <option value="$PROJECT_DIR$/demo/springboot-rabbitmq/pom.xml" />
+        <option value="$PROJECT_DIR$/demo/spring-data-redis-main/pom.xml" />
+        <option value="$PROJECT_DIR$/demo/javacore-rabbitmq/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/demo1/javacore-rabbitmq/pom.xml" />
+        <option value="$PROJECT_DIR$/demo1/untitled/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_20" default="true" project-jdk-name="20" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
