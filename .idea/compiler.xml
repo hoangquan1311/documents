@@ -7,8 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="javacore" />
+        <module name="Core-service" />
         <module name="demo" />
         <module name="spring-data-redis-example" />
+        <module name="Payment-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -19,6 +21,8 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Core-service" options="-parameters" />
+      <module name="Payment-service" options="-parameters" />
       <module name="demo" options="-parameters" />
       <module name="demo1" options="-parameters" />
       <module name="javacore-rabbitmq" options="-parameters" />
