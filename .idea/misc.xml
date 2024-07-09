@@ -13,11 +13,15 @@
         <option value="$PROJECT_DIR$/demo/springboot-rabbitmq/pom.xml" />
         <option value="$PROJECT_DIR$/demo/spring-data-redis-main/pom.xml" />
         <option value="$PROJECT_DIR$/demo/javacore-rabbitmq/pom.xml" />
+        <option value="$PROJECT_DIR$/demo1/pom.xml" />
+        <option value="$PROJECT_DIR$/payment/pom.xml" />
+        <option value="$PROJECT_DIR$/demo/payment/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/demo1/javacore-rabbitmq/pom.xml" />
+        <option value="$PROJECT_DIR$/demo1/pom.xml" />
         <option value="$PROJECT_DIR$/demo1/untitled/pom.xml" />
       </set>
     </option>

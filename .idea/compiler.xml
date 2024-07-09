@@ -6,19 +6,23 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="javacore" />
         <module name="demo" />
         <module name="spring-data-redis-example" />
-        <module name="javacore" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="demo1" target="17" />
       <module name="javacore-rabbitmq" target="17" />
+      <module name="payment" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="demo" options="-parameters" />
+      <module name="demo1" options="-parameters" />
       <module name="javacore-rabbitmq" options="-parameters" />
+      <module name="payment" options="-parameters" />
       <module name="spring-data-redis-example" options="-parameters" />
     </option>
   </component>
