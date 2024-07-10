@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.concurrent.TimeoutException;
 
-@Controller
 @RestController
 @RequestMapping("/api/v1/payment")
 public class PaymentController {

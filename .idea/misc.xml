@@ -18,6 +18,8 @@
         <option value="$PROJECT_DIR$/demo/payment/pom.xml" />
         <option value="$PROJECT_DIR$/demo/payment/Core-service/pom.xml" />
         <option value="$PROJECT_DIR$/demo/payment/Payment-service/pom.xml" />
+        <option value="$PROJECT_DIR$/demo/payment-springboot/Core-service/pom.xml" />
+        <option value="$PROJECT_DIR$/demo/payment-springboot/Payment-service/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
