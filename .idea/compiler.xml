@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="javacore" />
         <module name="Core-service" />
+        <module name="javacore-redis" />
         <module name="demo" />
         <module name="spring-data-redis-example" />
         <module name="Payment-service" />
