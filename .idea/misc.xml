@@ -22,6 +22,7 @@
         <option value="$PROJECT_DIR$/demo/payment-springboot/Payment-service/pom.xml" />
         <option value="$PROJECT_DIR$/javacore-redis/pom.xml" />
         <option value="$PROJECT_DIR$/demo/javacore-redis/pom.xml" />
+        <option value="$PROJECT_DIR$/payment-javacore/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
@@ -29,6 +30,7 @@
         <option value="$PROJECT_DIR$/demo1/javacore-rabbitmq/pom.xml" />
         <option value="$PROJECT_DIR$/demo1/pom.xml" />
         <option value="$PROJECT_DIR$/demo1/untitled/pom.xml" />
+        <option value="$PROJECT_DIR$/payment-javacore/pom.xml" />
       </set>
     </option>
   </component>

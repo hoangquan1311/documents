@@ -13,8 +13,10 @@ public class Main {
         jedis.lpush("messages", "For");
         jedis.lpush("messages", "Java");
 
-        List<String> messages = jedis.lrange("messages", 0, 2);
-        messages.forEach(s -> System.out.println(s + ""));
+        List<String> messages = jedis.lrange("messages", 0, -1);
+        for (String message : messages) {
+            System.out.println("Message: " + message);
+        }
         jedis.close();
     }
 }
