@@ -6,26 +6,32 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Core-service" />
+        <module name="Core-service (1) (org.example)" />
+        <module name="Payment-service (1) (org.example)" />
         <module name="javacore" />
         <module name="javacore-redis" />
         <module name="demo" />
         <module name="spring-data-redis-example" />
-        <module name="Payment-service" />
         <module name="payment-javacore" />
+        <module name="Core-service (2) (com.example)" />
+        <module name="Payment-service (2) (com.example)" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Core-service" target="17" />
       <module name="demo1" target="17" />
       <module name="javacore-rabbitmq" target="17" />
       <module name="payment" target="17" />
       <module name="payment-javacore" target="17" />
+      <module name="Payment-service" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Core-service" options="-parameters" />
+      <module name="Core-service (2) (com.example)" options="-parameters" />
       <module name="Payment-service" options="-parameters" />
+      <module name="Payment-service (2) (com.example)" options="-parameters" />
       <module name="demo" options="-parameters" />
       <module name="demo1" options="-parameters" />
       <module name="javacore-rabbitmq" options="-parameters" />

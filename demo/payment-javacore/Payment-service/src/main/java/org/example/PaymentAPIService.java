@@ -22,7 +22,6 @@ public class PaymentAPIService {
     private static final Logger logger = LoggerFactory.getLogger(PaymentAPIService.class);
 
     public static void main(String[] args) {
-        // Example JSON input representing PaymentRequest
         String jsonInput = "{\n" +
                 "    \"userName\": \"NGUY T T HA\",\n" +
                 "    \"customerName\": \"NGUY T T HA\",\n" +
