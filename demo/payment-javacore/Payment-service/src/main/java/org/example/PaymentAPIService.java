@@ -1,10 +1,8 @@
 package org.example;
 
 import com.google.gson.Gson;
-import com.rabbitmq.client.AMQP;
+
 import com.rabbitmq.client.Channel;
-import com.rabbitmq.client.Connection;
-import com.rabbitmq.client.ConnectionFactory;
 import com.rabbitmq.client.DeliverCallback;
 import org.example.Config.RabbitMQConfig;
 import org.example.Entity.PaymentMessage;

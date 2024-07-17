@@ -25,6 +25,7 @@
         <option value="$PROJECT_DIR$/payment-javacore/pom.xml" />
         <option value="$PROJECT_DIR$/demo/payment-javacore/Core-service/pom.xml" />
         <option value="$PROJECT_DIR$/demo/payment-javacore/Payment-service/pom.xml" />
+        <option value="$PROJECT_DIR$/demo/fee-javacore/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

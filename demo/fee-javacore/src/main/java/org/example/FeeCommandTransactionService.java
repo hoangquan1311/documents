@@ -21,7 +21,7 @@ public class FeeCommandTransactionService {
     public void addFeeCommandAndTransactions(String requestId, String requestTime, String commandCode,
                                              int totalRecord, double totalFee, String createdUser, String createdDate) {
         if (isRequestIdDuplicate(requestId)) {
-            throw new RuntimeException("Duplicate requestId in a day.");
+            throw new RuntimeException("Duplicate requestId in a day: " + requestId);
         }
         if (isRequestTimeValid(requestTime)) {
             throw new RuntimeException("Request time exceeds the 10-minute limit.");
@@ -173,7 +173,7 @@ public class FeeCommandTransactionService {
         LocalDateTime requestDateTime = LocalDateTime.parse(requestTime, formatter);
         LocalDateTime now = LocalDateTime.now();
         long minutesDifference = ChronoUnit.MINUTES.between(requestDateTime, now);
-        return minutesDifference <= 10;
+        return minutesDifference > 10;
     }
 
     public void pushToRedis(String requestId) {
@@ -237,26 +237,25 @@ public class FeeCommandTransactionService {
     }
     public static void main(String[] args) throws SchedulerException {
         FeeCommandTransactionService service = new FeeCommandTransactionService();
-        service.addFeeCommandAndTransactions("hjawfhwqsnmkfu123894y21345", "20230623155051", "FC230623523226", 1000, 1000, "admin", "20230623155051");
-        service.getFeeCommand("FC230623523226");
-        service.updateFeeTransactions();
-        service.createCronjob();
+//        service.addFeeCommandAndTransactions("hjawfhwqsnmkfu123894y22223", "20230623155051", "FC230623523226", 1000, 1000, "admin", "20230623155051");
+//        service.getFeeCommand("FC230623523226");
+//        service.updateFeeTransactions();
         service.updateChargeScanAndUpdateStatus();
-
-        Scheduler scheduler = StdSchedulerFactory.getDefaultScheduler();
-        JobDetail job = JobBuilder.newJob(Cronjob.class)
-                .withIdentity("job1", "group1")
-                .build();
-        Trigger trigger = TriggerBuilder.newTrigger()
-                .withIdentity("feeTransactionTrigger", "group1")
-                .startNow()
-                .withSchedule(SimpleScheduleBuilder.simpleSchedule()
-                        .withIntervalInMinutes(3)
-                        .repeatForever())
-                .build();
-        scheduler.scheduleJob(job, trigger);
-
-        scheduler.start();
+//
+//        Scheduler scheduler = StdSchedulerFactory.getDefaultScheduler();
+//        JobDetail job = JobBuilder.newJob(Cronjob.class)
+//                .withIdentity("job1", "group1")
+//                .build();
+//        Trigger trigger = TriggerBuilder.newTrigger()
+//                .withIdentity("feeTransactionTrigger", "group1")
+//                .startNow()
+//                .withSchedule(SimpleScheduleBuilder.simpleSchedule()
+//                        .withIntervalInMinutes(3)
+//                        .repeatForever())
+//                .build();
+//        scheduler.scheduleJob(job, trigger);
+//
+//        scheduler.start();
     }
 }
 
