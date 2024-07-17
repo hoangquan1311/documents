@@ -1,6 +1,7 @@
-1. [Cách hoạt động](#cách-hoạt-động)
-
-## Cách hoạt động
+1. [Kiểm tra](#kiểm-tra)
+2. [Tạo giao dịch](#tạo-giao-dịch)
+3. [Lấy thông tin và cập nhập lại giao dịch](#lấy-thông-tin-và-cập-nhật)
+## Kiểm tra
 
 Check trùng requestId bằng cách kiểm tra xem key có tồn tại trong redis hay không nếu có trả về true và ném vào exception. Nếu không có thì lưu vào redis để expire là 864000s
 
@@ -15,8 +16,7 @@ Check trùng requestId bằng cách kiểm tra xem key có tồn tại trong red
 Check thời gian requestTime so với thời gian hiện tại không quá 10 phút nếu quá 10 phút thì ném vào exception
 
 ![check_requestId.png](image/check_requestTime.png)
-
-<br>
+## Tạo giao dịch
 
 Thêm mới một lệnh thu phí và các giao dịch thu phí, trạng thái “Khởi tạo”, theo bản tin:
 
@@ -42,14 +42,15 @@ Thêm vào bảng FEE_TRANSACTION
 ![fee_transaction](image/fee_transaction1.png)
 <br>
 ![fee_transaction2](image/fee_transaction2.png)
-<br>
+
+## Lấy thông tin và cập nhật
 Lấy thông tin của tất cả các giao dịch phí có chứa mã "commandCode"
 ![getCommandCode](image/getCommandCode.png)
 <br>
 ![getCommandCode2](image/getCommandCode2.png)
 
 <br>
-Cập nhật thông tin cho các giao dịch trên: TOTAL_SCAN = 1, MODIFIED_DATE bằng thời gian cập nhật, STATUS = “02”.
+Cập nhật thông tin cho các giao dịch trên: TOTAL_SCAN = 1, MODIFIED_DATE bằng thời gian cập nhật, STATUS = “02” tại những bản ghi có STATUS = "01".
 <br>
 
 ![update1](image/update1.png)

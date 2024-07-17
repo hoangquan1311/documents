@@ -130,7 +130,8 @@ public class FeeCommandTransactionService {
 
     public void updateFeeTransactions() {
         String updateSql = "UPDATE FEE_TRANSACTION " +
-                "SET TOTAL_SCAN = 1, REMARK = 'PAY', MODIFIED_DATE = SYSTIMESTAMP, STATUS = '02' ";
+                "SET TOTAL_SCAN = 1, REMARK = 'PAY', MODIFIED_DATE = SYSTIMESTAMP, STATUS = '02' " +
+                "WHERE STATUS = '01'";
 
         Connection connection = null;
         try {
@@ -237,10 +238,10 @@ public class FeeCommandTransactionService {
     }
     public static void main(String[] args) throws SchedulerException {
         FeeCommandTransactionService service = new FeeCommandTransactionService();
-//        service.addFeeCommandAndTransactions("hjawfhwqsnmkfu123894y22223", "20230623155051", "FC230623523226", 1000, 1000, "admin", "20230623155051");
-//        service.getFeeCommand("FC230623523226");
+//        service.addFeeCommandAndTransactions("hjawfhwqsnmkfu123894y222233", "20230623155051", "FC230623523226", 1000, 1000, "admin", "20230623155051");
+        service.getFeeCommand("FC230623523226");
 //        service.updateFeeTransactions();
-        service.updateChargeScanAndUpdateStatus();
+//        service.updateChargeScanAndUpdateStatus();
 //
 //        Scheduler scheduler = StdSchedulerFactory.getDefaultScheduler();
 //        JobDetail job = JobBuilder.newJob(Cronjob.class)
