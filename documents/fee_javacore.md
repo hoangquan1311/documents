@@ -12,7 +12,7 @@ Check trùng requestId bằng cách kiểm tra xem key có tồn tại trong red
 ![check_requestId.png](image/check_requestId.png)
 
 <br>
-Check thời gian requestTime so với thời gian hiện tại không quá 10 phút nếu quá 10 phúy thì ném vào exception
+Check thời gian requestTime so với thời gian hiện tại không quá 10 phút nếu quá 10 phút thì ném vào exception
 
 ![check_requestId.png](image/check_requestTime.png)
 
