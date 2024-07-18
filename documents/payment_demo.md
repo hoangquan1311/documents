@@ -11,7 +11,7 @@ Có log request, response: ghi log bản tin, log IP gọi, thời gian từ lú
 Bản tin sau đó sẽ được gửi cùng với token thông qua rabbitMQ( Direct Exchange)
 ![Send ](image/send1.png)
 
-Nhận phản hồi từ Core
+Nhận phản hồi từ Core trả lại thông tin cho client
 ![Receivecore1 ](image/receivecore1.png)
 
 Thời gian chờ tối đa (timeout) của mỗi request là 2 phút
