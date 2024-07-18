@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8158acb5-72eb-486f-ada3-32709a94e976" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../fee-javacore/src/main/java/org/example/Connection/OracleConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fee-javacore/src/main/java/org/example/Connection/RabbitMQConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fee-javacore/src/main/java/org/example/Connection/RedisConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fee-javacore/src/main/java/org/example/Entity/FeeCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../fee-javacore/src/main/java/org/example/Entity/FeeTransaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,9 +29,15 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/ADMIN/Desktop/documents/demo/payment-javacore",
+    "last_opened_file_path": "C:/Users/ADMIN/Desktop/documents/demo/javacore-rabbitmq",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "spring.configuration.checksum": "9e9d198244401c7effdd7d5be42616e1",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -48,6 +50,8 @@
       <option name="presentableId" value="Default" />
       <updated>1721054881979</updated>
       <workItem from="1721054882944" duration="11000" />
+      <workItem from="1721272420784" duration="48000" />
+      <workItem from="1721272785468" duration="607000" />
     </task>
     <servers />
   </component>
