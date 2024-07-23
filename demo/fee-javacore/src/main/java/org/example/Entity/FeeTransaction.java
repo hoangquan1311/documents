@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 import java.util.Date;
 
 public class FeeTransaction {
-    private Long id;
+    private String id;
     private String transactionCode;
     private String commandCode;
     private Double feeAmount;
@@ -17,7 +17,7 @@ public class FeeTransaction {
     private LocalDateTime createdDate;
     private LocalDateTime modifiedDate;
 
-    public FeeTransaction(Long id, String transactionCode, String commandCode, Double feeAmount, String status, String accountNumber, Integer totalScan, String remark, LocalDateTime createdDate, LocalDateTime modifiedDate) {
+    public FeeTransaction(String id, String transactionCode, String commandCode, Double feeAmount, String status, String accountNumber, Integer totalScan, String remark, LocalDateTime createdDate, LocalDateTime modifiedDate) {
         this.id = id;
         this.transactionCode = transactionCode;
         this.commandCode = commandCode;
@@ -30,11 +30,14 @@ public class FeeTransaction {
         this.modifiedDate = modifiedDate;
     }
 
-    public Long getId() {
+    public FeeTransaction() {
+    }
+
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 

@@ -1,9 +1,6 @@
-package org.example.Entity;
+package org.example.Resquest;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-
-public class FeeCommand {
+public class FeeRequest {
     private String requestId;
     private String requestTime;
     private String commandCode;
@@ -12,7 +9,7 @@ public class FeeCommand {
     private String createdUser;
     private String createdDate;
 
-    public FeeCommand(String requestId, String requestTime, String commandCode, int totalRecord, double totalFee, String createdUser, String createdDate) {
+    public FeeRequest(String requestId, String requestTime, String commandCode, int totalRecord, double totalFee, String createdUser, String createdDate) {
         this.requestId = requestId;
         this.requestTime = requestTime;
         this.commandCode = commandCode;
@@ -22,7 +19,7 @@ public class FeeCommand {
         this.createdDate = createdDate;
     }
 
-    public FeeCommand() {
+    public FeeRequest() {
     }
 
     public String getRequestId() {
@@ -81,6 +78,7 @@ public class FeeCommand {
         this.createdDate = createdDate;
     }
 
+    // Các phương thức getter và setter
 
     @Override
     public String toString() {
