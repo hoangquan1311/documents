@@ -1,4 +1,4 @@
-package org.example;
+package org.example.Service;
 
 import com.google.gson.Gson;
 import com.rabbitmq.client.Channel;
@@ -8,6 +8,7 @@ import org.example.Config.RabbitMQConfig;
 import org.example.Config.RedisConfig;
 import org.example.Convert.ConvertToTimestamp;
 import org.example.Entity.PaymentMessage;
+import org.example.Response.ResponseFromCore;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import redis.clients.jedis.Jedis;
@@ -23,11 +24,7 @@ import java.util.concurrent.*;
 public class CoreService {
     private static final Logger logger = LoggerFactory.getLogger(CoreService.class);
 
-    public static void main(String[] args) {
-        startListening();
-    }
-
-    public static void startListening() {
+    public void startListening() {
         RabbitMQConfig rabbitMQConfig = new RabbitMQConfig();
         RedisConfig redisConfig = new RedisConfig();
 
@@ -48,7 +45,7 @@ public class CoreService {
         }
     }
 
-    public static void processMessage(String message, Jedis jedis) {
+    public void processMessage(String message, Jedis jedis) {
         Gson gson = new Gson();
         PaymentMessage paymentMessage = gson.fromJson(message, PaymentMessage.class);
         logger.info("Payment Request: " + paymentMessage.getPaymentRequest());
@@ -75,7 +72,7 @@ public class CoreService {
         }
     }
 
-    public static void insertIntoOracle(PaymentMessage paymentMessage) {
+    public void insertIntoOracle(PaymentMessage paymentMessage) {
         long startTime = System.currentTimeMillis();
         String sql = "INSERT INTO payment (Customer_Name, Res_Code, Data, amount, debit_Amount, real_Amount, Pay_date, Local_date) " +
                 "VALUES (?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP)";
@@ -114,11 +111,13 @@ public class CoreService {
         }
     }
 
-    public static void sendResponseToRabbitMQ(String errorCode, String message, String token) {
+    public void sendResponseToRabbitMQ(String errorCode, String message, String token) {
         RabbitMQConfig rabbitMQConfig = new RabbitMQConfig();
+        Gson gson = new Gson();
         try {
             Channel channel = rabbitMQConfig.createChannel();
-            String responseMessage = "errorCode: " + errorCode + ", message: " + message + ", token: " + token;
+            ResponseFromCore response = new ResponseFromCore(errorCode, message, token);
+            String responseMessage = gson.toJson(response);
             channel.basicPublish(rabbitMQConfig.getExchange(), rabbitMQConfig.getResponseRoutingKey(), null,
                     responseMessage.getBytes(StandardCharsets.UTF_8));
             logger.info("Response sent to RabbitMQ: " + responseMessage);

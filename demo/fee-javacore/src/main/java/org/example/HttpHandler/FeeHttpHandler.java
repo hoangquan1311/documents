@@ -8,16 +8,11 @@ import org.example.Connection.LocalDateTimeTypeAdapter;
 import org.example.Entity.FeeTransaction;
 import org.example.Resquest.FeeRequest;
 import org.example.Service.FeeCommandTransactionService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.io.IOException;
 import java.io.OutputStream;
-import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class FeeHttpHandler implements HttpHandler {

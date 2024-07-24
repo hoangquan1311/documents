@@ -1,6 +1,7 @@
-import org.example.PaymentAPIService;
+import org.example.Main;
 import org.junit.Test;
 import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.io.PrintStream;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
@@ -18,7 +19,11 @@ public class PaymentAPIServiceTest {
         long timeoutMillis = 5000;
         CountDownLatch latch = new CountDownLatch(1);
         new Thread(() -> {
-            PaymentAPIService.main(new String[]{});
+            try {
+                Main.main(new String[]{});
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         }).start();
         boolean responseReceived = latch.await(timeoutMillis, TimeUnit.MILLISECONDS);
 
