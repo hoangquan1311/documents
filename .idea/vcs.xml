@@ -2,6 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/demo/demo-fe" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/demo/RabbitMQ-FE" vcs="Git" />
   </component>
 </project>

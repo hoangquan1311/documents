@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d1a7465f-cb58-4afb-a73e-2545254eff7a" name="Changes" comment="add md file">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RabbitMQ-FE" beforeDir="false" afterPath="$PROJECT_DIR$/../RabbitMQ-FE" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +49,7 @@
     "WebServerToolWindowFactoryState": "false",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "20",
-    "last_opened_file_path": "C:/Users/ADMIN/Desktop/documents/demo/spring-data-redis-main",
+    "last_opened_file_path": "C:/Users/ADMIN/Desktop/documents/demo/payment-springboot",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -116,6 +117,7 @@
       <workItem from="1722219542071" duration="3416000" />
       <workItem from="1722226418604" duration="588000" />
       <workItem from="1722227303734" duration="22000" />
+      <workItem from="1722327967727" duration="407000" />
     </task>
     <task id="LOCAL-00001" summary="add md file">
       <option name="closed" value="true" />
