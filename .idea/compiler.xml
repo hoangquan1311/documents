@@ -7,20 +7,22 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Core-service (1) (org.example)" />
+        <module name="demo (2)" />
+        <module name="demo (1)" />
         <module name="fee-javacore" />
         <module name="Payment-service (1) (org.example)" />
         <module name="javacore" />
         <module name="javacore-redis" />
-        <module name="demo" />
         <module name="spring-data-redis-example" />
         <module name="payment-javacore" />
         <module name="Core-service (2) (com.example)" />
+        <module name="demo1" />
         <module name="Payment-service (2) (com.example)" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Core-service" target="17" />
-      <module name="demo1" target="17" />
+      <module name="demo" target="17" />
       <module name="javacore-rabbitmq" target="17" />
       <module name="payment" target="17" />
       <module name="payment-javacore" target="17" />
@@ -34,6 +36,8 @@
       <module name="Payment-service" options="-parameters" />
       <module name="Payment-service (2) (com.example)" options="-parameters" />
       <module name="demo" options="-parameters" />
+      <module name="demo (1)" options="-parameters" />
+      <module name="demo (2)" options="-parameters" />
       <module name="demo1" options="-parameters" />
       <module name="javacore-rabbitmq" options="-parameters" />
       <module name="payment" options="-parameters" />

@@ -16,6 +16,10 @@
     <file url="file://$PROJECT_DIR$/demo/payment/Payment-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo/payment/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo/payment/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo/rabbitmq_chat_be/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo/rabbitmq_chat_be/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo/redis_chat_be/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo/redis_chat_be/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo/spring-data-redis-main/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo/spring-data-redis-main/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo/springboot-rabbitmq/src/main/java" charset="UTF-8" />
