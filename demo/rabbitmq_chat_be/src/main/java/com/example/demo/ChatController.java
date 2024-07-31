@@ -20,6 +20,7 @@ public class ChatController {
         messageSender.sendMessage(message);
     }
     @MessageMapping("/chatNewUser")
+    @SendTo("/topic/messages")
     public WebSocketChatMessage addUser(@Payload WebSocketChatMessage webSocketChatMessage,
                                         SimpMessageHeaderAccessor headerAccessor) {
         headerAccessor.getSessionAttributes().put("username", webSocketChatMessage.getSender());
