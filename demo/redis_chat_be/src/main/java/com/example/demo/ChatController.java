@@ -2,7 +2,9 @@ package com.example.demo;
 
 import com.example.demo.Entity.ChatRoom;
 import com.example.demo.Repository.ChatRoomRepository;
+import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.http.ResponseEntity;
 import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.handler.annotation.MessageMapping;
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:3000/")
@@ -25,6 +28,8 @@ public class ChatController {
     private ChatRoomRepository chatRoomRepository;
     @Autowired
     private SimpMessagingTemplate messagingTemplate;
+    @Autowired
+    private RedisTemplate<String, String> redisTemplate;
 
     @MessageMapping("/sendMessage/{roomId}")
     public void sendMessage(@DestinationVariable String roomId ,@Payload WebSocketChatMessage message) {
@@ -54,5 +59,11 @@ public class ChatController {
             messagingTemplate.convertAndSend("/topic/rooms", roomId);
             return ResponseEntity.ok("Delete success " + roomId);
         }).orElseGet(() -> ResponseEntity.notFound().build());
+    }
+    @GetMapping("/api/rooms/{roomId}/messages")
+    public List<WebSocketChatMessage> getMessages(@PathVariable String roomId) {
+        Gson gson = new Gson();
+        List<String> messagesJson = redisTemplate.opsForList().range(roomId, 0, -1);
+        return messagesJson.stream().map(json -> gson.fromJson(json, WebSocketChatMessage.class)).collect(Collectors.toList());
     }
 }

@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1a7465f-cb58-4afb-a73e-2545254eff7a" name="Changes" comment="add md file">
-      <change afterPath="$PROJECT_DIR$/../redis_chat_be/src/main/java/com/example/demo/Dto/MessageDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../redis_chat_be/src/main/java/com/example/demo/Entity/ChatRoom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../redis_chat_be/src/main/java/com/example/demo/Repository/ChatRoomRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rabbitmq_redis_chat_fe" beforeDir="false" afterPath="$PROJECT_DIR$/../rabbitmq_redis_chat_fe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../redis_chat_be/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../redis_chat_be/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../redis_chat_be/src/main/java/com/example/demo/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../redis_chat_be/src/main/java/com/example/demo/ChatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../redis_chat_be/src/main/java/com/example/demo/MessageReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../redis_chat_be/src/main/java/com/example/demo/MessageReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../redis_chat_be/src/main/java/com/example/demo/MessageSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/../redis_chat_be/src/main/java/com/example/demo/MessageSender.java" afterDir="false" />
-    </list>
+    <list default="true" id="d1a7465f-cb58-4afb-a73e-2545254eff7a" name="Changes" comment="add md file" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -125,7 +115,7 @@
       <workItem from="1722226418604" duration="588000" />
       <workItem from="1722227303734" duration="22000" />
       <workItem from="1722327967727" duration="407000" />
-      <workItem from="1722503096491" duration="920000" />
+      <workItem from="1722503096491" duration="1194000" />
     </task>
     <task id="LOCAL-00001" summary="add md file">
       <option name="closed" value="true" />
