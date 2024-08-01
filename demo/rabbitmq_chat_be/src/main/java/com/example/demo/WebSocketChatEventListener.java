@@ -25,13 +25,14 @@ public class WebSocketChatEventListener {
         StompHeaderAccessor headerAccessor = StompHeaderAccessor.wrap(event.getMessage());
 
         String username = (String) headerAccessor.getSessionAttributes().get("username");
-        if(username != null) {
+        String roomId = (String) headerAccessor.getSessionAttributes().get("roomId");
 
+        if(username != null && roomId != null) {
             WebSocketChatMessage chatMessage = new WebSocketChatMessage();
             chatMessage.setType("Leave");
             chatMessage.setSender(username);
 
-            messagingTemplate.convertAndSend("/topic/messages", chatMessage);
+            messagingTemplate.convertAndSend("/topic/" + roomId + "/messages", chatMessage);
         }
     }
 }
