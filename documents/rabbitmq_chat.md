@@ -16,7 +16,7 @@ BE sẽ lưu người dùng và quản lý đến khi hết phiên chat
 Khi người dùng gửi một tin nhắn
 
 ![FE3 ](image/fe3.png)
-![FE4 ](image/fe4.png)
+![FE6 ](image/fe6.png)
 
 Tín nhắn được gửi qua rabbitmq với exchange, routing key dạng DirectExchange và message
 

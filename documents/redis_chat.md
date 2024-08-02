@@ -22,7 +22,7 @@ Giao diện phòng chat
 Khi người dùng gửi một tin nhắn
 
 ![FE3 ](image/fe3.png)
-![FE4 ](image/fe4.png)
+![FE6 ](image/fe6.png)
 
 Tín nhắn được gửi qua redis với đến key = "xin chao" và value = "message" và roomId để biết tin nhắn đang ở phòng có Id nào
 
