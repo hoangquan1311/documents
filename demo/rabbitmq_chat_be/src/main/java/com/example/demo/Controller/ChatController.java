@@ -1,7 +1,9 @@
-package com.example.demo;
+package com.example.demo.Controller;
 
 import com.example.demo.Entity.ChatRoom;
+import com.example.demo.Serivce.MessageSender;
 import com.example.demo.Repository.ChatRoomRepository;
+import com.example.demo.Entity.WebSocketChatMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.messaging.handler.annotation.DestinationVariable;
@@ -13,7 +15,6 @@ import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:3000/")

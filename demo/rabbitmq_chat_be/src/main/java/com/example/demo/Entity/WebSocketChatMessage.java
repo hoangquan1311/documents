@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.Entity;
 
 public class WebSocketChatMessage {
     private String type;

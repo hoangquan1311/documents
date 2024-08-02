@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.Config;
 
 import org.springframework.amqp.core.*;
 import org.springframework.context.annotation.Bean;

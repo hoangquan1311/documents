@@ -1,6 +1,6 @@
-package com.example.demo;
+package com.example.demo.Serivce;
 
-import com.example.demo.WebSocketChatMessage;
+import com.example.demo.Entity.WebSocketChatMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.event.EventListener;
 import org.springframework.messaging.simp.SimpMessageSendingOperations;

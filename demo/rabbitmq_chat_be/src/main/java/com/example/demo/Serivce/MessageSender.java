@@ -1,6 +1,8 @@
-package com.example.demo;
+package com.example.demo.Serivce;
 
 import com.example.demo.Dto.MessageDto;
+import com.example.demo.Config.RabbitMQConfig;
+import com.example.demo.Entity.WebSocketChatMessage;
 import com.google.gson.Gson;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
