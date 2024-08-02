@@ -21,10 +21,10 @@ Khi người dùng gửi một tin nhắn
 Tín nhắn được gửi qua rabbitmq với exchange, routing key dạng DirectExchange và message
 
 ![BE6 ](image/be2.png)
-![BE7 ](image/be3.png)
+![BE10 ](image/be10.png)
 
 Sau khi tin nhắn được nhận bắn qua websocket với destination = "/topic/messages"
-![BE4 ](image/be3.png)
+![BE11 ](image/be11.png)
 
 Hiển thị tin nhắn và các tin phía trước và real-time các tin nhắn
 ![FE5 ](image/fe5.png)
