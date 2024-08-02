@@ -2,10 +2,12 @@
 
 ## Cách thức hoạt động
 
-Khi người dùng đăng nhập thì tên người dùng sẽ được lưu vào localstorage ở FE để hiển thị tên khi submit tên cùng với đó được điều hướng đến trang /chat
+Khi người dùng đăng nhập thì tên người dùng sẽ được lưu vào localstorage ở FE để hiển thị tên khi submit tên cùng với đó được điều hướng đến trang rooms
 
 ![FE1 ](image/fe1.png)
-![FE2 ](image/fe2.png)
+
+Tại đây có thể xóa, hoặc tạo một phòng tùy ý.
+![FE9 ](image/fe9.png)
 
 BE sẽ lưu người dùng và quản lý đến khi hết phiên chat
 
