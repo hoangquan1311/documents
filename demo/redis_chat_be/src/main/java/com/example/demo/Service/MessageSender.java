@@ -1,6 +1,7 @@
-package com.example.demo;
+package com.example.demo.Service;
 
 import com.example.demo.Dto.MessageDto;
+import com.example.demo.Entity.WebSocketChatMessage;
 import com.google.gson.Gson;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;

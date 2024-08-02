@@ -1,7 +1,9 @@
-package com.example.demo;
+package com.example.demo.Controller;
 
 import com.example.demo.Entity.ChatRoom;
+import com.example.demo.Service.MessageSender;
 import com.example.demo.Repository.ChatRoomRepository;
+import com.example.demo.Entity.WebSocketChatMessage;
 import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -15,7 +17,6 @@ import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @RestController

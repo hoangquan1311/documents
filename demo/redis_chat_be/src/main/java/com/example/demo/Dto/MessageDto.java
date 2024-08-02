@@ -1,6 +1,6 @@
 package com.example.demo.Dto;
 
-import com.example.demo.WebSocketChatMessage;
+import com.example.demo.Entity.WebSocketChatMessage;
 
 public class MessageDto {
     private String roomId;
