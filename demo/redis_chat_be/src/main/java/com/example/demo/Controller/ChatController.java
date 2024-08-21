@@ -67,4 +67,13 @@ public class ChatController {
         List<String> messagesJson = redisTemplate.opsForList().range(roomId, 0, -1);
         return messagesJson.stream().map(json -> gson.fromJson(json, WebSocketChatMessage.class)).collect(Collectors.toList());
     }
+    @GetMapping("/api/rooms/{roomId}/search-messages")
+    public List<WebSocketChatMessage> searchMessage(@PathVariable String roomId, @RequestParam String keyword) {
+        Gson gson = new Gson();
+        List<String> messagesJson = redisTemplate.opsForList().range(roomId, 0, -1);
+        return messagesJson.stream()
+                .map(json -> gson.fromJson(json, WebSocketChatMessage.class))
+                .filter(message -> message.getContent().toLowerCase().contains(keyword.toLowerCase()))
+                .collect(Collectors.toList());
+    }
 }
