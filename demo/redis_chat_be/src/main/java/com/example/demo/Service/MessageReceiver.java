@@ -22,9 +22,9 @@ public class MessageReceiver {
         MessageDto messageDto = gson.fromJson(message, MessageDto.class);
         String roomId = messageDto.getRoomId();
         WebSocketChatMessage webSocketChatMessage = messageDto.getWebSocketChatMessage();
-
+        webSocketChatMessage.setType("Chat");
         System.out.println("Received message for room: " + roomId);
-        System.out.println("Message: " + webSocketChatMessage);
+        System.out.println("Message: " + webSocketChatMessage.getFile());
         redisTemplate.opsForList().rightPush(roomId, gson.toJson(webSocketChatMessage));
         template.convertAndSend("/topic/" + roomId + "/messages", webSocketChatMessage);
     }

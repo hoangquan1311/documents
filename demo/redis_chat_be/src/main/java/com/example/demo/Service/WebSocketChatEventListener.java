@@ -30,7 +30,6 @@ public class WebSocketChatEventListener {
             WebSocketChatMessage chatMessage = new WebSocketChatMessage();
             chatMessage.setType("Leave");
             chatMessage.setSender(username);
-
             messagingTemplate.convertAndSend("/topic/" + roomId + "/messages", chatMessage);
         }
     }
