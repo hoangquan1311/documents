@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1a7465f-cb58-4afb-a73e-2545254eff7a" name="Changes" comment="add md file" />
+    <list default="true" id="d1a7465f-cb58-4afb-a73e-2545254eff7a" name="Changes" comment="add md file">
+      <change afterPath="$PROJECT_DIR$/../elasticsearch-mysql/demo/src/main/java/com/example/demo/Config/MyClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../elasticsearch-mysql/demo/src/main/java/com/example/demo/Controller/MyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../elasticsearch-mysql/demo/src/main/java/com/example/demo/Entity/MyDocument.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../elasticsearch-mysql/demo/src/main/java/com/example/demo/Entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../elasticsearch-mysql/demo/src/main/java/com/example/demo/Repository/MyDocumentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../elasticsearch-mysql/demo/src/main/java/com/example/demo/Service/MyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mongodb-elasticsearch/src/main/java/com/example/demo/Tutorial.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mongodb-elasticsearch/src/main/java/com/example/demo/TutorialController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mongodb-elasticsearch/src/main/java/com/example/demo/TutorialRepository.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -116,6 +126,7 @@
       <workItem from="1722227303734" duration="22000" />
       <workItem from="1722327967727" duration="407000" />
       <workItem from="1722503096491" duration="1194000" />
+      <workItem from="1724743196606" duration="21000" />
     </task>
     <task id="LOCAL-00001" summary="add md file">
       <option name="closed" value="true" />
