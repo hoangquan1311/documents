@@ -1,6 +1,10 @@
 package com.example.demo.Controller;
 
 import com.example.demo.Entity.ChatRoom;
+import com.example.demo.Entity.Message;
+import com.example.demo.Entity.MessageElasticsearch;
+import com.example.demo.Repository.MessageElasticsearchRepository;
+import com.example.demo.Repository.MessageRepository;
 import com.example.demo.Service.MessageSender;
 import com.example.demo.Repository.ChatRoomRepository;
 import com.example.demo.Entity.WebSocketChatMessage;
@@ -35,11 +39,16 @@ public class ChatController {
     private SimpMessagingTemplate messagingTemplate;
     @Autowired
     private RedisTemplate<String, String> redisTemplate;
+    @Autowired
+    private MessageRepository messageRepository;
+    @Autowired
+    private MessageElasticsearchRepository messageElasticsearchRepository;
 
     @MessageMapping("/sendMessage/{roomId}")
-    public void sendMessage(@DestinationVariable String roomId ,@Payload WebSocketChatMessage message) {
-        messageSender.sendMessage(roomId ,message);
+    public void sendMessage(@DestinationVariable String roomId, @Payload WebSocketChatMessage message) {
+        messageSender.sendMessage(roomId, message);
     }
+
     @MessageMapping("/chatNewUser/{roomId}")
     @SendTo("/topic/{roomId}/messages")
     public WebSocketChatMessage addUser(@DestinationVariable String roomId, @Payload WebSocketChatMessage webSocketChatMessage,
@@ -48,15 +57,18 @@ public class ChatController {
         headerAccessor.getSessionAttributes().put("roomId", roomId);
         return webSocketChatMessage;
     }
+
     @MessageMapping("/createRoom")
     @SendTo("/topic/rooms")
     public ChatRoom createRoom(@Payload ChatRoom chatRoom) {
         return chatRoomRepository.save(chatRoom);
     }
+
     @GetMapping("/api/rooms")
     public List<ChatRoom> getAllRooms() {
         return chatRoomRepository.findAll();
     }
+
     @DeleteMapping("/api/rooms/{roomId}")
     public ResponseEntity<String> deleteRoom(@PathVariable Long roomId) {
         return chatRoomRepository.findById(roomId).map(room -> {
@@ -65,19 +77,36 @@ public class ChatController {
             return ResponseEntity.ok("Delete success " + roomId);
         }).orElseGet(() -> ResponseEntity.notFound().build());
     }
+
     @GetMapping("/api/rooms/{roomId}/messages")
     public List<WebSocketChatMessage> getMessages(@PathVariable String roomId) {
-        Gson gson = new Gson();
-        List<String> messagesJson = redisTemplate.opsForList().range(roomId, 0, -1);
-        return messagesJson.stream().map(json -> gson.fromJson(json, WebSocketChatMessage.class)).collect(Collectors.toList());
-    }
-    @GetMapping("/api/rooms/{roomId}/search-messages")
-    public List<WebSocketChatMessage> searchMessage(@PathVariable String roomId, @RequestParam String keyword) {
-        Gson gson = new Gson();
-        List<String> messagesJson = redisTemplate.opsForList().range(roomId, 0, -1);
-        return messagesJson.stream()
-                .map(json -> gson.fromJson(json, WebSocketChatMessage.class))
-                .filter(message -> message.getContent().toLowerCase().contains(keyword.toLowerCase()))
+        List<Message> messages = messageRepository.findByRoomId(roomId);
+        return messages.stream()
+                .map(message -> {
+                    WebSocketChatMessage chatMessage = new WebSocketChatMessage();
+                    chatMessage.setType(message.getType());
+                    chatMessage.setContent(message.getContent());
+                    chatMessage.setSender(message.getSender());
+                    chatMessage.setFile(message.getFile());
+                    return chatMessage;
+                })
                 .collect(Collectors.toList());
     }
+
+    @GetMapping("/api/rooms/{roomId}/search-messages")
+    public List<WebSocketChatMessage> searchMessage(@PathVariable String roomId, @RequestParam String keyword) {
+        List<MessageElasticsearch> elasticsearchMessages = messageElasticsearchRepository.findByRoomIdAndContentContaining(roomId, keyword);
+
+        return elasticsearchMessages.stream()
+                .map(message -> {
+                    WebSocketChatMessage chatMessage = new WebSocketChatMessage();
+                    chatMessage.setType(message.getType());
+                    chatMessage.setContent(message.getContent());
+                    chatMessage.setSender(message.getSender());
+                    chatMessage.setFile(message.getFile());
+                    return chatMessage;
+                })
+                .collect(Collectors.toList());
+    }
+
 }

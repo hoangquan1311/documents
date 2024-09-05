@@ -78,7 +78,7 @@ public class CoreService {
                 "VALUES (?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP)";
 
         try (Connection connection = OracleConnection.getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+             PreparedStatement preparedStatement = connection.prepareStatement(sql)) {//prepared statements
 
             preparedStatement.setString(1, paymentMessage.getPaymentRequest().getCustomerName());
             preparedStatement.setString(2, paymentMessage.getPaymentRequest().getRescode());
