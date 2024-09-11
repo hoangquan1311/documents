@@ -5,6 +5,8 @@ import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
 
+import java.util.Arrays;
+
 @Document(indexName = "search_text")
 public class MessageElasticsearch {
     @Id
@@ -61,5 +63,17 @@ public class MessageElasticsearch {
 
     public void setRoomId(String roomId) {
         this.roomId = roomId;
+    }
+
+    @Override
+    public String toString() {
+        return "MessageElasticsearch{" +
+                "id=" + id +
+                ", roomId='" + roomId + '\'' +
+                ", type='" + type + '\'' +
+                ", content='" + content + '\'' +
+                ", sender='" + sender + '\'' +
+                ", file_send=" + Arrays.toString(file_send) +
+                '}';
     }
 }

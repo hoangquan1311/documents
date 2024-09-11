@@ -4,9 +4,6 @@ import com.example.demo.Entity.Message;
 import com.example.demo.Entity.MessageElasticsearch;
 import com.example.demo.Repository.MessageElasticsearchRepository;
 import com.example.demo.Repository.MessageRepository;
-import org.elasticsearch.index.query.QueryBuilders;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -36,5 +33,6 @@ public class MessageService {
                 })
                 .collect(Collectors.toList());
         messageElasticsearchRepository.saveAll(esMessages);
+
     }
 }
