@@ -4,6 +4,7 @@ import com.example.demo.Dto.MessageDto;
 import com.example.demo.Entity.WebSocketChatMessage;
 import com.example.demo.Service.MessageSender;
 import com.google.gson.Gson;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -19,7 +20,8 @@ public class MessageSenderTest {
     private  RedisTemplate<String, String> redisTemplate;
     @InjectMocks
     private MessageSender messageSender;
-    private MessageSenderTest() {
+    @BeforeEach
+    private void MessageSenderTest() {
         MockitoAnnotations.openMocks(this);
     }
     @Test
@@ -37,6 +39,7 @@ public class MessageSenderTest {
         messageDto.setRoomId(roomId);
         Gson gson = new Gson();
         String message = gson.toJson(messageDto);
+        System.out.println("Messge >> " + message);
         messageSender.sendMessage(roomId, webSocketChatMessage);
         verify(redisTemplate, times(1)).convertAndSend("xinchao", message);
     }

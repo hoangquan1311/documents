@@ -1,5 +1,7 @@
 package com.example.demo.Entity;
 
+import java.util.Arrays;
+
 public class WebSocketChatMessage {
     private String type;
     private String content;
@@ -36,5 +38,15 @@ public class WebSocketChatMessage {
 
     public void setFile(byte[] file) {
         this.file_send = file;
+    }
+
+    @Override
+    public String toString() {
+        return "WebSocketChatMessage{" +
+                "type='" + type + '\'' +
+                ", content='" + content + '\'' +
+                ", sender='" + sender + '\'' +
+                ", file_send=" + Arrays.toString(file_send) +
+                '}';
     }
 }

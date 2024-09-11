@@ -5,6 +5,7 @@ import com.example.demo.Entity.MessageElasticsearch;
 import com.example.demo.Repository.MessageElasticsearchRepository;
 import com.example.demo.Repository.MessageRepository;
 import com.example.demo.Service.MessageService;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -27,8 +28,8 @@ public class MessageServiceTest {
 
     @Mock
     private MessageElasticsearchRepository messageElasticsearchRepository;
-
-    public MessageServiceTest() {
+    @BeforeEach
+    public void MessageServiceTest() {
         MockitoAnnotations.openMocks(this);
     }
 
