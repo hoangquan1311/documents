@@ -15,9 +15,6 @@ public class MessageSender {
         this.redisTemplate = redisTemplate;
     }
 
-    public void sendMessage(String message) {
-        redisTemplate.convertAndSend("xinchao", message);
-    }
     public void sendMessage(String roomId, WebSocketChatMessage webSocketChatMessage) {
         MessageDto messageDto = new MessageDto();
         messageDto.setRoomId(roomId);

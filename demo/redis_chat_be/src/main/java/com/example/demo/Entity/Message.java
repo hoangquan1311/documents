@@ -2,6 +2,8 @@ package com.example.demo.Entity;
 
 import jakarta.persistence.*;
 
+import java.util.Arrays;
+
 @Entity
 @Table(name = "message")
 public class Message {
@@ -67,5 +69,17 @@ public class Message {
 
     public void setRoomId(String roomId) {
         this.roomId = roomId;
+    }
+
+    @Override
+    public String toString() {
+        return "Message{" +
+                "id=" + id +
+                ", roomId='" + roomId + '\'' +
+                ", type='" + type + '\'' +
+                ", content='" + content + '\'' +
+                ", sender='" + sender + '\'' +
+                ", file_send=" + Arrays.toString(file_send) +
+                '}';
     }
 }
