@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8158acb5-72eb-486f-ada3-32709a94e976" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redis_chat_be/src/main/java/com/example/demo/Service/MessageSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/../redis_chat_be/src/main/java/com/example/demo/Service/MessageSender.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +32,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/ADMIN/Desktop/documents/demo/javacore-rabbitmq",
+    "last_opened_file_path": "C:/Users/ADMIN/Desktop/documents/demo/spring-data-redis-main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -52,6 +52,7 @@
       <workItem from="1721054882944" duration="11000" />
       <workItem from="1721272420784" duration="48000" />
       <workItem from="1721272785468" duration="607000" />
+      <workItem from="1726124292824" duration="142000" />
     </task>
     <servers />
   </component>

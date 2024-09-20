@@ -8,4 +8,5 @@ import java.util.List;
 @Repository
 public interface MessageRepository extends JpaRepository<Message, Long> {
     List<Message> findByRoomId(String roomId);
+    void deleteByRoomId (String roomId);
 }

@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d1a7465f-cb58-4afb-a73e-2545254eff7a" name="Changes" comment="add md file">
-      <change beforePath="$PROJECT_DIR$/../payment-javacore/Core-service/src/main/java/org/example/Service/CoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../payment-javacore/Core-service/src/main/java/org/example/Service/CoreService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../javacore-redis/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../javacore-redis/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redis_chat_be/src/main/java/com/example/demo/Service/MessageSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/../redis_chat_be/src/main/java/com/example/demo/Service/MessageSender.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +50,7 @@
     "WebServerToolWindowFactoryState": "false",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "20",
-    "last_opened_file_path": "C:/Users/ADMIN/Desktop/test/order-food",
+    "last_opened_file_path": "C:/Users/ADMIN/Desktop/documents/demo/payment-javacore",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -120,6 +122,7 @@
       <workItem from="1722503096491" duration="1194000" />
       <workItem from="1724743196606" duration="21000" />
       <workItem from="1724984789138" duration="29000" />
+      <workItem from="1726452232049" duration="4586000" />
     </task>
     <task id="LOCAL-00001" summary="add md file">
       <option name="closed" value="true" />
