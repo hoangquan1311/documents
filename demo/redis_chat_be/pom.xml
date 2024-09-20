@@ -34,7 +34,7 @@
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-elasticsearch</artifactId>
-            <version>5.3.3</version>
+            <version>5.3.4</version>
         </dependency>
 
         <dependency>
@@ -96,6 +96,7 @@
             <artifactId>junit-vintage-engine</artifactId>
             <scope>test</scope>
         </dependency>
+
 
     </dependencies>
 

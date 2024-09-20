@@ -8,6 +8,7 @@ import com.example.demo.Repository.MessageRepository;
 import com.example.demo.Service.MessageSender;
 import com.example.demo.Repository.ChatRoomRepository;
 import com.example.demo.Entity.WebSocketChatMessage;
+import com.example.demo.Service.MessageService;
 import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -43,7 +44,8 @@ public class ChatController {
     private MessageRepository messageRepository;
     @Autowired
     private MessageElasticsearchRepository messageElasticsearchRepository;
-
+    @Autowired
+    private MessageService messageService;
     @MessageMapping("/sendMessage/{roomId}")
     public void sendMessage(@DestinationVariable String roomId, @Payload WebSocketChatMessage message) {
         messageSender.sendMessage(roomId, message);
@@ -109,5 +111,6 @@ public class ChatController {
                 })
                 .collect(Collectors.toList());
     }
+
 
 }

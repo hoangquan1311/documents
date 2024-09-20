@@ -33,12 +33,12 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
         registration.setSendTimeLimit(20000);  // Giới hạn thời gian gửi tin nhắn
     }
 
-//    @Bean
-//    public ServletServerContainerFactoryBean createWebSocketContainer() {
-//        ServletServerContainerFactoryBean factoryBean = new ServletServerContainerFactoryBean();
-//        factoryBean.setMaxBinaryMessageBufferSize(2 * 1024 * 1024);  // Giới hạn kích thước bộ đệm nhị phân
-//        factoryBean.setMaxTextMessageBufferSize(2 * 1024 * 1024);    // Giới hạn kích thước bộ đệm văn bản
-//        factoryBean.setMaxSessionIdleTimeout(60 * 1000L);            // Giới hạn thời gian timeout của phiên
-//        return factoryBean;
-//    }
+    @Bean
+    public ServletServerContainerFactoryBean createWebSocketContainer() {
+        ServletServerContainerFactoryBean factoryBean = new ServletServerContainerFactoryBean();
+        factoryBean.setMaxBinaryMessageBufferSize(2 * 1024 * 1024);  // Giới hạn kích thước bộ đệm nhị phân
+        factoryBean.setMaxTextMessageBufferSize(2 * 1024 * 1024);    // Giới hạn kích thước bộ đệm văn bản
+        factoryBean.setMaxSessionIdleTimeout(60 * 1000L);            // Giới hạn thời gian timeout của phiên
+        return factoryBean;
+    }
 }
