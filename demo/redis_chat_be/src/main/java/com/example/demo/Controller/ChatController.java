@@ -33,7 +33,7 @@ import java.util.stream.Collectors;
 public class ChatController {
 
     @Autowired
-    private MessageSender messageSender; //checkout xóa
+    private MessageSender messageSender; //conflic2
     @Autowired
     private ChatRoomRepository chatRoomRepository;
     @Autowired
