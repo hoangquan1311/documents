@@ -33,7 +33,7 @@ import java.util.stream.Collectors;
 public class ChatController {
 
     @Autowired
-    private MessageSender messageSender;
+    private MessageSender messageSender; //checkout
     @Autowired
     private ChatRoomRepository chatRoomRepository;
     @Autowired
@@ -46,6 +46,7 @@ public class ChatController {
     private MessageElasticsearchRepository messageElasticsearchRepository;
     @Autowired
     private MessageService messageService;
+
     @MessageMapping("/sendMessage/{roomId}")
     public void sendMessage(@DestinationVariable String roomId, @Payload WebSocketChatMessage message) {
         messageSender.sendMessage(roomId, message);
@@ -75,7 +76,7 @@ public class ChatController {
     public ResponseEntity<String> deleteRoom(@PathVariable Long roomId) {
         return chatRoomRepository.findById(roomId).map(room -> {
             chatRoomRepository.delete(room);
-                messageRepository.deleteByRoomId(new String(String.valueOf(roomId)));
+            messageRepository.deleteByRoomId(new String(String.valueOf(roomId)));
             messagingTemplate.convertAndSend("/topic/rooms", roomId);
             return ResponseEntity.ok("Delete success " + roomId);
         }).orElseGet(() -> ResponseEntity.notFound().build());
