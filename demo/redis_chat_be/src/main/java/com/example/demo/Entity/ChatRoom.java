@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 @Table(name = "chat_room")
 public class ChatRoom {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)///xin chao
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(name = "name")
     private String name;
